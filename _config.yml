@@ -1,0 +1,12 @@
+# Site settings
+title: Alastair Taylor | UI/UX Designer in Glasgow
+email: hello@alastairtaylor.com
+description: UI/UX designer living in sunny Glasgow in bonnie Scotland. Likes doing Good For Nothing - @GFNGlasgow
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://alastairtaylor.com" # the base hostname & protocol for your site
+twitter_username: hellomrtaylor
+github_username: hellomrtaylor
+
+# Build settings
+markdown: kramdown
+
