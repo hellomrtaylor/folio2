@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Alastair Taylor | UI/UX Designer in Glasgow</title>
-    <description>UI/UX designer living in sunny Glasgow in bonnie Scotland. Likes doing Good For Nothing - @GFNGlasgow</description>
-    <link>http://alastairtaylor.com/</link>
-    <atom:link href="http://alastairtaylor.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 17 Nov 2019 22:45:34 +0100</pubDate>
-    <lastBuildDate>Sun, 17 Nov 2019 22:45:34 +0100</lastBuildDate>
+    <title>Ali Taylor | Product Designer in Amsterdam</title>
+    <description></description>
+    <link>http://wwww.alitaylor.nl/</link>
+    <atom:link href="http://wwww.alitaylor.nl/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Mon, 18 Nov 2019 11:32:19 +0100</pubDate>
+    <lastBuildDate>Mon, 18 Nov 2019 11:32:19 +0100</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
       <item>
@@ -27,8 +27,8 @@
 
 </description>
         <pubDate>Sat, 07 Mar 2015 18:59:08 +0100</pubDate>
-        <link>http://alastairtaylor.com/jekyll/update/2015/03/07/welcome-to-jekyll.html</link>
-        <guid isPermaLink="true">http://alastairtaylor.com/jekyll/update/2015/03/07/welcome-to-jekyll.html</guid>
+        <link>http://wwww.alitaylor.nl/jekyll/update/2015/03/07/welcome-to-jekyll.html</link>
+        <guid isPermaLink="true">http://wwww.alitaylor.nl/jekyll/update/2015/03/07/welcome-to-jekyll.html</guid>
         
         
         <category>jekyll</category>
