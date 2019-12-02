@@ -1,0 +1,121 @@
+/* ----------- */
+/* TYPOGRAPHY */
+/* ----------- */
+/* Scale
+96
+60
+48  
+34
+24
+20
+16
+14
+12
+*/
+
+
+@function strip-unit($value) {
+  @return $value / ($value * 0 + 1);
+}
+
+@mixin fluid-type($min-vw, $max-vw, $min-font-size, $max-font-size) {
+  $u1: unit($min-vw);
+  $u2: unit($max-vw);
+  $u3: unit($min-font-size);
+  $u4: unit($max-font-size);
+
+  @if $u1 == $u2 and $u1 == $u3 and $u1 == $u4 {
+    & {
+      font-size: $min-font-size;
+      @media screen and (min-width: $min-vw) {
+        font-size: calc(#{$min-font-size} + #{strip-unit($max-font-size - $min-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
+      }
+      @media screen and (min-width: $max-vw) {
+        font-size: $max-font-size;
+      }
+    }
+  }
+}
+
+
+
+
+body {
+  
+  $min_font: 16px;
+  $max_font: 24px;
+
+  @include fluid-type($min_width, $max_width, $min_font, $max_font);
+
+  
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1.25em;
+  font-weight: 400;
+}
+
+h1, h2, h3, h4, h5, p {
+  margin-top: 0px;
+  line-height: 1.25em;
+}
+
+h1, h2, h3, h4, h5 {
+  font-weight: 600;
+}
+
+.display_one {
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 32px;  
+
+  $min_font: 48px;
+  $max_font: 96px;
+
+  @include fluid-type($min_width, $max_width, $min_font, $max_font);
+}
+
+.display_two {
+  
+  $min_font: 34px;
+  $max_font: 60px;
+  @include fluid-type($min_width, $max_width, $min_font, $max_font);
+  margin: 0 0 4px;
+}
+
+.display_three {
+  
+  $min_font: 20px;
+  $max_font: 34px;
+  @include fluid-type($min_width, $max_width, $min_font, $max_font);
+  margin: 0 0 4px;
+}
+
+
+.featured {
+  
+  $min_font: 20px;
+  $max_font: 24px;
+  @include fluid-type($min_width, $max_width, $min_font, $max_font);
+
+  margin:0 0 16px;
+  line-height: 1.4em;
+}
+
+.caption {
+  $min_font: 12px;
+  $max_font: 16px;
+  @include fluid-type($min_width, $max_width, $min_font, $max_font);
+
+  color: #8a8a8a;
+  margin-top: 4px;
+  display: block;
+}
+
+.project_role {
+  $min_font: 16px;
+  $max_font: 20px;
+  @include fluid-type($min_width, $max_width, $min_font, $max_font);
+
+  margin-bottom: 32px;
+  color: #8a8a8a;
+  margin: 0 0 8px;
+}
