@@ -60,7 +60,7 @@ h1, h2, h3, h4, h5 {
   $max_font: 24px;
   $min_font: 20px;
   @include fluid-type($min_width, $max_width, $min_font, $max_font);
-  line-height: 1.4em;
+  line-height: 1.6em;
   margin:0 0 16px;
 }
 
