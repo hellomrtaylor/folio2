@@ -13,49 +13,19 @@
 12
 */
 
-
-@function strip-unit($value) {
-  @return $value / ($value * 0 + 1);
-}
-
-@mixin fluid-type($min-vw, $max-vw, $min-font-size, $max-font-size) {
-  $u1: unit($min-vw);
-  $u2: unit($max-vw);
-  $u3: unit($min-font-size);
-  $u4: unit($max-font-size);
-
-  @if $u1 == $u2 and $u1 == $u3 and $u1 == $u4 {
-    & {
-      font-size: $min-font-size;
-      @media screen and (min-width: $min-vw) {
-        font-size: calc(#{$min-font-size} + #{strip-unit($max-font-size - $min-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
-      }
-      @media screen and (min-width: $max-vw) {
-        font-size: $max-font-size;
-      }
-    }
-  }
-}
-
-
-
-
 body {
-  
-  $min_font: 16px;
   $max_font: 24px;
-
+  $min_font: 16px;
   @include fluid-type($min_width, $max_width, $min_font, $max_font);
-
-  
   font-family: 'Montserrat', sans-serif;
-  line-height: 1.25em;
   font-weight: 400;
+  line-height: 1.25em;
+  color: $colour_text_primary;
 }
 
 h1, h2, h3, h4, h5, p {
-  margin-top: 0px;
   line-height: 1.25em;
+  margin-top: 0px;
 }
 
 h1, h2, h3, h4, h5 {
@@ -63,26 +33,22 @@ h1, h2, h3, h4, h5 {
 }
 
 .display_one {
-  text-align: center;
-  margin-top: 0;
-  margin-bottom: 32px;  
-
-  $min_font: 48px;
   $max_font: 96px;
-
+  $min_font: 48px;
   @include fluid-type($min_width, $max_width, $min_font, $max_font);
+  margin-bottom: 32px;  
+  margin-top: 0;
+  text-align: center;
 }
 
 .display_two {
-  
-  $min_font: 34px;
   $max_font: 60px;
+  $min_font: 34px;
   @include fluid-type($min_width, $max_width, $min_font, $max_font);
   margin: 0 0 4px;
 }
 
 .display_three {
-  
   $min_font: 20px;
   $max_font: 34px;
   @include fluid-type($min_width, $max_width, $min_font, $max_font);
@@ -91,31 +57,36 @@ h1, h2, h3, h4, h5 {
 
 
 .featured {
-  
-  $min_font: 20px;
   $max_font: 24px;
+  $min_font: 20px;
   @include fluid-type($min_width, $max_width, $min_font, $max_font);
-
-  margin:0 0 16px;
   line-height: 1.4em;
-}
-
-.caption {
-  $min_font: 12px;
-  $max_font: 16px;
-  @include fluid-type($min_width, $max_width, $min_font, $max_font);
-
-  color: #8a8a8a;
-  margin-top: 4px;
-  display: block;
+  margin:0 0 16px;
 }
 
 .project_role {
-  $min_font: 16px;
   $max_font: 20px;
+  $min_font: 16px;
   @include fluid-type($min_width, $max_width, $min_font, $max_font);
-
-  margin-bottom: 32px;
   color: #8a8a8a;
+  margin-bottom: 32px;
   margin: 0 0 8px;
 }
+
+.article_body {
+  $max_font: 20px;
+  $min_font: 16px;
+  @include fluid-type($min_width, $max_width, $min_font, $max_font);
+  line-height: 1.8em;
+  margin-bottom: 32px;
+}
+
+.caption {
+  $max_font: 16px;
+  $min_font: 12px;
+  @include fluid-type($min_width, $max_width, $min_font, $max_font);
+  color: #8a8a8a;
+  display: block;
+  margin-top: 4px;
+}
+

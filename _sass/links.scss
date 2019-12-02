@@ -8,66 +8,64 @@ a:hover {
 }
 
 .clear_link {
-  text-decoration: none;
   color: inherit;
+  text-decoration: none;
   &:hover, &:visited, &:active{
     color: inherit;
   }
 }
 
-
 .button{
-  display: block;
-  padding: 5vw;
-  background-color: #FF664A;
-  color: #242424;
-  text-align: center;
+  $max_font: 24px;
+  $min_font: 20px;
+  @include fluid-type($min_width, $max_width, $min_font, $max_font);
+  background-color: $colour_action_primary;
   border-radius: 4px;
-  font-weight: bold;
+  color: #FFFFFF;
+  display: block;
+  margin: 32px 0;
+  padding: 16px 24px;
+  text-align: center;
+  text-align: center;
   text-decoration: none;
-  margin-bottom: 32px;
-  font-size: 5.6vw;
 
   &:hover {
-    background-color: #DE614A;
+    background-color: $colour_action_secondary;
   }
 
   &:visited {
-    color:inherit;
+    color: #FFFFFF;
   }
 
   @media all and (min-width: 520px) {
     display: inline-block;
-    font-size: 26px;
-    padding: 16px;
     flex-basis: auto;
+    padding: 16px 24px;
   }
 
 }
 
 .link_outer {
   width: 100%;
-  background-color: #E0E0E0;
+  background-color: $colour_bg_secondary;
   margin: 0 auto;
-
 }
 
 .back_link, .next_link {
-  width: 100%;
-  font-family: 'Calistoga', cursive;
-  font-size: 6.3vw;
-  line-height: 1.25em;
+  $max_font: 24px;
+  $min_font: 20px;
+  @include fluid-type($min_width, $max_width, $min_font, $max_font);
   display: flex;
-  max-width: 800px;
+  line-height: 1.25em;
   margin: 0 auto;
+  max-width: 800px;
   padding: 16px 24px;
+  width: 100%;
 
   &:hover {
-    text-decoration: underline;
   }
 
   @media all and (min-width: 520px) {
-    font-size: 32px;
     padding: 16px 32px;
   }
 }
@@ -77,21 +75,18 @@ a:hover {
 }
 
   .back_arrow {
-    margin-right: 8px;
     align-self: center;
+    margin-right: 8px;
     @media all and (min-width: 520px) {
       margin-right: 16px;
     }
   }
 
   .link_subtitle {
-    font-size: 12px;
-    font-family: 'Montserrat', sans-serif;
+    $max_font: 16px;
+    $min_font: 12px;
+    @include fluid-type($min_width, $max_width, $min_font, $max_font);
     display: block;
-
-    @media all and (min-width: 520px) {
-      font-size: 16px;
-    }
   }
 
   .forward_arrow{

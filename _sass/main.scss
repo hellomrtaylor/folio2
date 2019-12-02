@@ -3,9 +3,8 @@
 }
 
 body {
-background: white;
+background: #FFFFFF;
 }
-
 
 .responsive_img {
   max-width: 100%;
@@ -40,19 +39,13 @@ background: white;
   }
 }
 
-/* ----------- */
 
 .header {
-  background-color: #FFD0C6;
+  background-color: $colour_bg_secondary;
 }
-
-  .header_title {
-    color: #A20000;
-  }
 
   .header_intro {
     text-align: center;
-    color: #A20000;
   }
 
 .section_footer {
@@ -60,7 +53,7 @@ background: white;
 }
 
 .footer {
-  background-color: #FF664A;
+  background-color: $colour_bg_primary;
   color: #242424;
   margin-bottom: 0;
   text-align: center;
@@ -83,12 +76,6 @@ background: white;
 
 
 /* ----------- */
-
-.article_body {
-  font-size: 18px;
-  margin-bottom: 32px;
-  line-height: 1.4em;
-}
 
 .article_role{
   margin-bottom: 32px;
