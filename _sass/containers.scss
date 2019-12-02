@@ -1,0 +1,21 @@
+.section {
+  padding: 40px 24px;
+  max-width: 800px;
+  margin: 0 auto;
+  @media all and (min-width: 520px) {
+    padding: 64px 32px;
+  }
+}
+
+.section_large {
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+
+  @media all and (min-width: 520px) {
+    display: block;
+    padding: 40px 32px;
+  }
+}
